@@ -8,17 +8,21 @@
     margin: 0;
     padding: 0;
     border: 0;
+    color: var(--color-black);
 }
 
 body{
     font-family: 'Roboto', sans-serif;
 }
+
 header{
     display: flex;
     height: 8vh;
+    width: 940px;
+    margin: 0 auto;
 }
 header .img{
-    margin: 3vh 0 0 17%;
+    margin-top: 3vh;
 }
 header .img img{
     background-image: var(--color-black);
@@ -30,7 +34,6 @@ header .links{
 header .links a{
     margin-right: 3%;
     text-decoration: none;
-    color: var(--color-black);
     font-size: 16px;
     line-height: 26px;
 }
@@ -38,7 +41,7 @@ header .links a{
 #retangulo{
     width: 940px;
     height: 366px;
-    margin: 0 0 0 16.5%;
+    margin: 0 auto;
     background: #FBDFDB;
     border-radius: 30px;
     display: flex;
@@ -47,7 +50,6 @@ header .links a{
     margin: 117px 0 0 60px;
 }
 #texto-retangulo h2{
-    color: var(--color-black);
     font-weight: bold;
     font-size: 32px;
     line-height: 42px;
@@ -70,3 +72,49 @@ header .links a{
 }
 
 /*=== index receitas ===*/
+.receitas{
+    width: 940px;
+    margin: 50px auto;
+}
+
+section h3{
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.card div img{
+    width: 300px;
+    height: 140px;
+    border-radius: 15px;
+}
+
+.box-information h4{
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-weight: normal;
+    font-size: 18px;
+}
+
+.box-information p{
+    font-size: 14px;
+    color: #777777;
+    margin-bottom: 10px;
+}
+
+.footer{
+    background-color: #eeeeee;
+    padding: 23px;
+}
+
+.footer p{
+    font-size: 14px;
+    color: #999999;
+    text-align: center;
+}
