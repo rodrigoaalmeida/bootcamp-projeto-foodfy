@@ -1,5 +1,9 @@
 @import "https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap";
 
+:root{
+    --color-black: #111111;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -17,7 +21,7 @@ header .img{
     margin: 3vh 0 0 17%;
 }
 header .img img{
-    background-image: #111111;
+    background-image: var(--color-black);
 }
 header .links{
     margin: 3.5vh 0 0 10%;
@@ -26,7 +30,43 @@ header .links{
 header .links a{
     margin-right: 3%;
     text-decoration: none;
-    color: #111111;
+    color: var(--color-black);
     font-size: 16px;
     line-height: 26px;
 }
+/*=== RETANGULO ===*/
+#retangulo{
+    width: 940px;
+    height: 366px;
+    margin: 0 0 0 16.5%;
+    background: #FBDFDB;
+    border-radius: 30px;
+    display: flex;
+}
+#texto-retangulo{
+    margin: 117px 0 0 60px;
+}
+#texto-retangulo h2{
+    color: var(--color-black);
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 42px;
+    width: 305px;
+    height: 38px;
+    margin-bottom: 10px;
+}
+#texto-retangulo p{
+    font-size: 18px;
+    line-height: 28px;
+    color: #000000;
+    opacity: 0.7;
+    width: 316px;
+    height: 84px;
+}
+#img-chefe {
+    width: 216px;
+    height: 300px;
+    margin: 66px 0 0 248px;
+}
+
+/*=== index receitas ===*/
