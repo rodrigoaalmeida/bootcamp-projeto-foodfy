@@ -47,10 +47,12 @@ header .links a{
 }
 .conteudo{
     padding-bottom: 50px;
+    width: 940px;
+    margin: 0 auto;
 }
 /*=== RETANGULO ===*/
 #retangulo{
-    width: 940px;
+    /* width: 940px; */
     height: 366px;
     margin: 0 auto;
     background: #FBDFDB;
@@ -86,12 +88,12 @@ header .links a{
 .conteudo h3{
     font-weight: bold;
     font-size: 24px;
-    width: 940px;
+    /* width: 940px; */
     margin: 50px auto 0;
 }
 
 .cards{
-    width: 940px;
+    /* width: 940px; */
     margin: 20px auto 50px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -115,6 +117,33 @@ header .links a{
     font-size: 14px;
     color: #777777;
     margin-bottom: 10px;
+}
+
+/*=== pagina sobre ===*/
+.sobre{
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+.sobre h5{
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 34px;
+    color: #111111;
+}
+
+.sobre h6{
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 30px;
+    color: #111111;
+}
+
+.sobre p{
+    font-size: 18px;
+    color: #444444;
+    line-height: 28px;
+    margin-top: 20px;
+    margin-bottom: 30px;
 }
 
 /*=== footer ===*/
