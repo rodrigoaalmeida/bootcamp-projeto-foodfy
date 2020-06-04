@@ -170,14 +170,13 @@ header .links a{
     height: 200px;
     border-radius: 15px;
 }
-.modal-content.nome-receita{
+.modal-content #nome-receita{
     font-size: 24px;
     line-height: 28px;
-    color: var(--color-black);
     text-align: center;
     margin-top: 20px;
 }
-.modal-content.nome-criador {
+.modal-content #nome-criador {
     font-size: 18px;
     line-height: 21px;
     color: #777777;
