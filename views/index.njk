@@ -1,54 +1,35 @@
-<!DOCTYPE html>
-<html>
+{% extends "layout.njk" %}
 
-    <head>
-        <link rel="stylesheet" href="style.css">
-        <title>Foodfy</title>
-    </head>
+{% block head %}
+    <title>Foodfy - Home</title>
+{% endblock %}
 
-    <body>
-        <header>
-            <div class="img">
-                <img src="/image/logo.png" alt="Logo Foodfy">
+{% block conteudo %}
+
+    <div class="conteudo">
+        <section id="retangulo">
+            <div id="texto-retangulo">
+                <h2>As melhores receitas</h2>
+                <p>Aprenda a construir os melhores pratos com receitas criadas por profissionais do mundo inteiro.</p>
             </div>
-            <div class="links">
-
-                <a href="sobre">Sobre</a>
-                <a href="receitas">Receitas</a>
+            <div id="img-chefe">
+                <img src="/image/chef.png" alt="Desenho de um chefe com uma bandeija na mão">
             </div>
-        </header>
+        </section>
 
-        <div class="pagina">
-            <div class="conteudo">
-                <section id="retangulo">
-                    <div id="texto-retangulo">
-                        <h2>As melhores receitas</h2>
-                        <p>Aprenda a construir os melhores pratos com receitas criadas por profissionais do mundo inteiro.</p>
-                    </div>
-                    <div id="img-chefe">
-                        <img src="/image/chef.png" alt="Desenho de um chefe com uma bandeija na mão">
-                    </div>
-                </section>
+        <h3>Mais acessadas</h3>
 
-                <h3>Mais acessadas</h3>
-
-                <div class="cards">
-                    {% for item in itens %}
-                        <div class="card">
-                            <img src="{{ item.imageLocal }}" alt="Imagem do {{ item.title }}">
-                            <h4>{{ item.title }}</h4>
-                            <p>por {{ item.author }}</p>
-                        </div>
-                    {% endfor %}
-                    
+        <div class="cards">
+            {% for item in itens %}
+                <div class="card">
+                    <img src="{{ item.imageLocal }}" alt="Imagem do {{ item.title }}">
+                    <h4>{{ item.title }}</h4>
+                    <p>por
+                        {{ item.author }}</p>
                 </div>
+            {% endfor %}
 
-            </div>
-
-            <div class="footer">
-                <p>Todos os direitos reservados, receitas Foodfy.</p>
-            </div>
         </div>
-    </body>
 
-</html>
+    </div>
+{% endblock %}

@@ -1,69 +1,32 @@
-<!DOCTYPE html>
-<html>
+{% extends "layout.njk" %}
 
-    <head>
-        <link rel="stylesheet" href="style.css">
-        <title>Foodfy</title>
-    </head>
+{% block head %}
+    <title>Foodfy - Home</title>
+{% endblock %}
 
-    <body>
-
-        <header>
-            <div class="img">
-                <img src="assets/logo.png" alt="Logo Foodfy">
-            </div>
-            <div class="links">
-
-                <a href="sobre.html">Sobre</a>
-                <a href="receitas.html">Receitas</a>
-            </div>
-        </header>
-
-        <div class="pagina">
-            <div class="conteudo">
-                <div class="cards">
-                    {% for item in itens %}
-                        <div class="card">
-                            <img src="{{ item.imageLocal }}" alt="Imagem do {{ item.title }}">
-                            <h4>{{ item.title }}</h4>
-                            <p>por
-                                {{ item.author }}</p>
-                        </div>
-                    {% endfor %}
-                    {% for item in itens %}
-                        <div class="card">
-                            <img src="{{ item.imageLocal }}" alt="Imagem do {{ item.title }}">
-                            <h4>{{ item.title }}</h4>
-                            <p>por
-                                {{ item.author }}</p>
-                        </div>
-                    {% endfor %}
-
+{% block conteudo %}
+    <div class="conteudo">
+        <div class="cards">
+            {% for item in itens %}
+                <div class="card">
+                    <img src="{{ item.imageLocal }}" alt="Imagem do {{ item.title }}">
+                    <h4>{{ item.title }}</h4>
+                    <p>por
+                        {{ item.author }}</p>
                 </div>
-            </div>
-
-            <div class="footer">
-                <p>Todos os direitos reservados, receitas Foodfy.</p>
-            </div>
-
-            <div class="modal-overlay">
-                <div class="modal">
-                    <div class="modal-content">
-                        <img src="" alt="">
-                        <p id="nome-receita"></p>
-                        <p id="nome-criador"></p>
-                    </div>
-
-                    <a class="close-modal">
-                        Fechar modal
-                    </a>
+            {% endfor %}
+            {% for item in itens %}
+                <div class="card">
+                    <img src="{{ item.imageLocal }}" alt="Imagem do {{ item.title }}">
+                    <h4>{{ item.title }}</h4>
+                    <p>por
+                        {{ item.author }}</p>
                 </div>
-            </div>
-
-            <script src="scripts.js"></script>
+            {% endfor %}
 
         </div>
+    </div>
 
-    </body>
+    <script src="scripts.js"></script>
 
-</html>
+{% endblock %}
