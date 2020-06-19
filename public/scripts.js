@@ -1,21 +1,22 @@
-const modalOverlay = document.querySelector('.modal-overlay');
 const cards = document.querySelectorAll('.card');
+const ingredientes = document.querySelector('.listaingredientes')
 
 for (let card of cards) {
     card.addEventListener("click", function () {
-        const srcImg = card.querySelector("img").src
-        const nomeReceita = card.querySelector("h4").innerHTML
-        const nomeCriador = card.querySelector("p").innerHTML
-        modalOverlay.classList.add('active')
-        modalOverlay.querySelector("img").src = srcImg
-        modalOverlay.querySelector("#nome-receita").innerHTML = nomeReceita
-        modalOverlay.querySelector("#nome-criador").innerHTML = nomeCriador
+        const cardIndice = card.getAttribute("indice")
+        window.location.href = `/detalhes/${cardIndice}`
     })
 }
 
-document.querySelector('.close-modal').addEventListener("click", function () {
-    modalOverlay.classList.remove('active')
-    modalOverlay.querySelector("img").src = ""
-    modalOverlay.querySelector("#nome-receita").innerHTML = ""
-    modalOverlay.querySelector("#nome-criador").innerHTML = ""
+document.querySelector('#escondermostrar-ingre').addEventListener("click",function(){
+    let texto = document.querySelector('#escondermostrar-ingre').innerHTML
+    if(texto === "ESCONDER"){
+        ingredientes.classList.add('noActive')
+        document.querySelector('#escondermostrar-ingre').innerHTML = "MOSTRAR"
+    }
+    if(texto === "MOSTRAR"){
+        ingredientes.classList.remove('noActive')
+        document.querySelector('#escondermostrar-ingre').innerHTML = "ESCONDER"
+    }
+    
 })

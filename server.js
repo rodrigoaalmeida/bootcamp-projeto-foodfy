@@ -13,19 +13,25 @@ nunjucks.configure("views", {
     noCache: true
 })
 
-server.get("/", function(req, res){
-    return res.render("index", {itens: receitas})
+server.get("/", function (req, res) {
+    return res.render("index", { itens: receitas })
 })
 
 
-server.get("/receitas", function(req, res){
-    return res.render("receitas", {itens: receitas})
+server.get("/receitas", function (req, res) {
+    return res.render("receitas", { itens: receitas })
 })
 
-server.get("/sobre", function(req, res){
+server.get("/sobre", function (req, res) {
     return res.render("sobre")
 })
 
-server.listen(5000, function(){
+server.get("/detalhes/:numero", function (req, res) {
+    const recipeIndex = req.params.numero;
+    
+    return res.render("detalhes", { itens: receitas[recipeIndex] })
+})
+
+server.listen(5000, function () {
     console.log("Server is running")
 })

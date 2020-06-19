@@ -21,7 +21,7 @@
 
         <div class="cards">
             {% for item in itens %}
-                <div class="card">
+                <div class="card" indice="{{ loop.index0 }}">
                     <img src="{{ item.imageLocal }}" alt="Imagem do {{ item.title }}">
                     <h4>{{ item.title }}</h4>
                     <p>por
@@ -32,4 +32,6 @@
         </div>
 
     </div>
+
+    <script src="/scripts.js"></script>
 {% endblock %}

@@ -226,3 +226,60 @@ header .links a{
     color: #999999;
     text-align: center;
 }
+
+/*=== pagina detalhes ===*/
+#bannerreceita-detalhes{
+    max-height: 280px;
+    border-radius: 15px;
+    margin: 20px auto 50px;
+}
+#nomereceita-detalhes{
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;
+    color: var(--color-black);
+    text-align: center;
+}
+#nomeautor-detalhes{
+    font-size: 20px;
+    line-height: 24px;
+    color: #777777;
+    text-align: center;
+}
+.ingredientes div{
+    display: flex;
+}
+.ingredientes p{
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    color: var(--color-black);
+    margin: 50px 0 20px;
+}
+#escondermostrar-ingre{
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 14px;
+    color: #999999;
+    margin: 61px 8px 20px;
+    cursor: pointer;
+}
+.listaingredientes{
+    font-size: 18px;
+    color: #444444;
+    line-height: 28px;
+    display: initial;
+}
+.listaingredientes.noActive{
+    display: none;
+}
+.modopreparo div{
+    display: flex;
+}
+.modopreparo p{
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    color: var(--color-black);
+    margin: 50px 0 20px;
+}
