@@ -11,30 +11,41 @@
         <p id="nomeautor-detalhes">por
             {{ itens.author }}</p>
 
-        <div class="ingredientes">
+        <div class="detalher-conteudo">
             <div>
-                <p>Ingredientes</p>
-                <a id="escondermostrar-ingre">ESCONDER</a>
+                <h7>Ingredientes</h7>
+                <a class="botao-escondermostrar">ESCONDER</a>
             </div>
-            <ul class="listaingredientes">
+            <div id="ul">
+            <ul class="caixa-escondermostrar">
                 {% for item in itens.ingredients %}
                     <li>{{ item }};</li>
                 {% endfor %}
             </ul>
-        </div>
-        <div class="modopreparo">
-            <div>
-                <p>Modo de Preparo</p>
-                <a id="escondermostrar-ingre">ESCONDER</a>
             </div>
-            <ul class="listamodopreparo">
+        </div>
+
+        <div class="detalher-conteudo">
+            <div>
+                <h7>Modo de Preparo</h7>
+                <a class="botao-escondermostrar">ESCONDER</a>
+            </div>
+            <div id="ul">
+            <ul class="caixa-escondermostrar">
                 {% for item in itens.preparation %}
                     <li>{{ item }};</li>
                 {% endfor %}
             </ul>
-
+            </div>
+        </div>
+        <div class="detalher-conteudo">
+            <div>
+                <h7>Informações adcionais</h7>
+                <a class="botao-escondermostrar">ESCONDER</a>
+            </div>
+            <p class="caixa-escondermostrar">{{ itens.information }}</p>
         </div>
     </div>
 
-    <script src="/scripts.js"></script>
+    
 {% endblock %}

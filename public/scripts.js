@@ -1,5 +1,5 @@
 const cards = document.querySelectorAll('.card');
-const ingredientes = document.querySelector('.listaingredientes')
+const informacoe = document.querySelectorAll('.detalher-conteudo')
 
 for (let card of cards) {
     card.addEventListener("click", function () {
@@ -8,15 +8,18 @@ for (let card of cards) {
     })
 }
 
-document.querySelector('#escondermostrar-ingre').addEventListener("click",function(){
-    let texto = document.querySelector('#escondermostrar-ingre').innerHTML
-    if(texto === "ESCONDER"){
-        ingredientes.classList.add('noActive')
-        document.querySelector('#escondermostrar-ingre').innerHTML = "MOSTRAR"
-    }
-    if(texto === "MOSTRAR"){
-        ingredientes.classList.remove('noActive')
-        document.querySelector('#escondermostrar-ingre').innerHTML = "ESCONDER"
-    }
-    
+for (let info of informacoe) {
+    info.querySelector('.botao-escondermostrar').addEventListener("click", function () {
+        if (info.querySelector('.botao-escondermostrar').innerHTML === "ESCONDER") {
+            info.querySelector('.caixa-escondermostrar').classList.add('noActive')
+            info.querySelector('.botao-escondermostrar').innerHTML = "MOSTRAR"
+        } else{
+            info.querySelector('.caixa-escondermostrar').classList.remove('noActive')
+            info.querySelector('.botao-escondermostrar').innerHTML = "ESCONDER"
+        }
+    })
+}
+
+document.querySelector('.img').addEventListener("click", function(){
+    window.location.href = '/'
 })
